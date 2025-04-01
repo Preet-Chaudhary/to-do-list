@@ -1,4 +1,10 @@
+import Home from "./components/Home";
+import Todoform from "./components/todoform";
+
 function App(){
-    return <h1>hello</h1>;
+    return <>
+    <Home />
+        {/* <Todoform /> */}
+    </>;
 }
 export default App
