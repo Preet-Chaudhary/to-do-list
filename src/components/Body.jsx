@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
 
-import Todoform from "./todoform";
+import Todoform from "./Todoform";
 
 const Body = () => {
 const [isopen,setisopen]=useState(false)
