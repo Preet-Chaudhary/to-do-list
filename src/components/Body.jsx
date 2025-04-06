@@ -62,7 +62,7 @@ const completed=(id)=>{
       />
             <h1 className={`text-3xl font-myfont ${elem.completed ? 'line-through text-gray-700' : ''}`}>{elem.value}</h1>
             <div className="flex ml-auto gap-2">
-             <button onClick={()=>edittaks(elem.id)} className=" border-2 rounded-2xl p-3 border-2-slate  bg-white">Edit</button><button onClick={()=>delttaks(elem.id)} className="p-1 border-2 border-2-slate   rounded-2xl bg-red-400">Delete</button>
+             <button onClick={()=>edittaks(elem.id)} className=" m-2 border-2 rounded-2xl p-3 border-2-slate  bg-white">Edit</button><button onClick={()=>delttaks(elem.id)} className="p-1 m-2 border-2 border-2-slate   rounded-2xl bg-red-400">Delete</button>
             </div>
         </div>
     
