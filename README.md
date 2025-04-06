@@ -19,7 +19,7 @@ A beautifully animated, responsive Task Manager built with **React** and **Tailw
 
 ## 📸 Preview
 
-![App Preview](./screenshot.png) <!-- Add your screenshot here -->
+![App Preview](images\screenshot.png) <!-- Add your screenshot here -->
 
 ---
 
