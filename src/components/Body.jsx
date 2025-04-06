@@ -5,7 +5,11 @@ import Todoform from "./todoform";
 
 const Body = () => {
 const [isopen,setisopen]=useState(false)
-const [tasks, settasks] = useState([])
+const [tasks, settasks] = useState(()=>{
+  return JSON.parse(localStorage.getItem("tasks")||[])
+})
+
+
 useEffect(() => {
 localStorage.setItem("tasks",JSON.stringify(tasks))
 }, [tasks])
@@ -20,6 +24,14 @@ const addtask=(item)=>{
   settasks(latest)
 
 };
+const delttaks=(id)=>{
+  const final=tasks.filter((tasks)=>tasks.id!=id)
+   settasks(final)
+};
+const edittaks=(id)=>{
+  delttaks(id);
+   setisopen(true)
+}
 
   return (
     <div className="flex flex-col lg:flex-row justify-between min-h-screen p-4">
@@ -28,7 +40,7 @@ const addtask=(item)=>{
         <h1 className="text-3xl p-2 rounded-2xl bg-slate-300 m-2 text-slate-700">
           Tasks
         </h1>
-        <div className="m-2 flex-col gap-2 p-2 border-2 rounded-2xl border-purple-600 bg-gradient-to-l from-violet-500 via-pink-500 to-fuchsia-400 w-full  ">
+        <div className="m-2 flex-col gap-4 p-2 border-2 rounded-2xl border-purple-600 bg-gradient-to-l from-violet-500 via-pink-500 to-fuchsia-400 w-full  ">
         
 
 {tasks.map(
@@ -43,7 +55,7 @@ const addtask=(item)=>{
       />
             <h1 className="text-3xl font-myfont">{elem.value}</h1>
             <div className="flex ml-auto gap-2">
-             <button className=" border-2 rounded-2xl p-3 border-2-slate  bg-white">Edit</button><button className="p-1 border-2 border-2-slate   rounded-2xl bg-red-400">Delete</button>
+             <button onClick={()=>edittaks(elem.id)} className=" border-2 rounded-2xl p-3 border-2-slate  bg-white">Edit</button><button onClick={()=>delttaks(elem.id)} className="p-1 border-2 border-2-slate   rounded-2xl bg-red-400">Delete</button>
             </div>
         </div>
     
