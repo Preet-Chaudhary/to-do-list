@@ -19,7 +19,11 @@ A beautifully animated, responsive Task Manager built with **React** and **Tailw
 
 ## 📸 Preview
 
+<<<<<<< HEAD
 ![App Preview]("https://github.com/Preet-Chaudhary/to-do-list/blob/master/src/constants/screenshot.png") <!-- Add your screenshot here -->
+=======
+![App Preview](https://github.com/Preet-Chaudhary/to-do-list/blob/master/src/constants/screenshot.png) <!-- Add your screenshot here -->
+>>>>>>> 64cd5f2fbe1da05361f58034f64d3d2117a6e892
 
 ---
 
